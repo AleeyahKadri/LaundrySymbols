@@ -56,12 +56,12 @@ android {
     namespace = "com.tomerpacific.laundry"
 }
 
-val kotlinVersion: String by rootProject.extra
+val kotlin_version: String by rootProject.extra
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation("androidx.fragment:fragment-ktx:1.4.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version")
     implementation("androidx.appcompat:appcompat:1.4.0")
     implementation("androidx.activity:activity-compose:1.8.2")
     implementation("androidx.compose.ui:ui-viewbinding:1.6.2")
