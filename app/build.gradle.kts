@@ -14,7 +14,7 @@ android {
         versionName = "2.4.8"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         dataBinding {
-            enable = true
+            isEnabled = true
         }
     }
 
