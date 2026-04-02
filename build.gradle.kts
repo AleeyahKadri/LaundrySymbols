@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    val kotlinVersion = project.findProperty("kotlin_version") as String
+    val kotlinVersion = (project.findProperty("kotlin_version") as? String) ?: "1.9.22"
 
     repositories {
         google()
@@ -23,5 +23,5 @@ allprojects {
 }
 
 tasks.register<Delete>("clean") {
-    delete(rootProject.buildDir)
+    delete(rootProject.layout.buildDirectory)
 }

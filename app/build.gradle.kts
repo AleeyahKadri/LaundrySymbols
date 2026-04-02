@@ -4,7 +4,7 @@ plugins {
     id("org.jetbrains.kotlin.kapt")
 }
 
-val kotlinVersion = rootProject.findProperty("kotlin_version") as String
+val kotlinVersion = (rootProject.findProperty("kotlin_version") as? String) ?: "1.9.22"
 
 android {
     compileSdk = 34
@@ -19,7 +19,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
     buildFeatures {
